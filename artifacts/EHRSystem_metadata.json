@@ -1,0 +1,316 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_department",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_docaddress",
+						"type": "address"
+					}
+				],
+				"name": "addDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_doctorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_associatedHospitals",
+						"type": "address[]"
+					}
+				],
+				"name": "addDoctorToHospital",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_hospitalAddress",
+						"type": "address"
+					}
+				],
+				"name": "addOrganization",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_hospitalAddress",
+						"type": "address"
+					}
+				],
+				"name": "associateDoctorWithHospital",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_hospitalAddress",
+						"type": "address"
+					}
+				],
+				"name": "chooseHospital",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_doctorAddress",
+						"type": "address"
+					}
+				],
+				"name": "displayDoctor",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDoctorAssociatedHospitals",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_aadharNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "getPatientDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_aadharNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "getPatientMedicalRecords",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "report",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "prescription",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "doctor",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "hospital",
+								"type": "address"
+							}
+						],
+						"internalType": "struct EHRSystem.MedicalRecord[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_dob",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_aadharnumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_height",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weight",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_addressInfo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNumber",
+						"type": "string"
+					}
+				],
+				"name": "registerPatient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ehr.sol": "EHRSystem"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ehr.sol": {
+			"keccak256": "0x4865ebe5ba2792b010b6f200c6a363d5462801838edb3ddcdea83616757b3ad2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ea8a476ed835eaf76eae7ea08028f2c2e3bea45a047fed7664318c1d37cf51c8",
+				"dweb:/ipfs/Qmf6w4FN4JohgW2h1ysiWNVd4o4Nm71BtJBrR4Mz2vbFTv"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,603 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "doctorAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "hospitalIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "doctorDetails",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "hospitalAddress",
+						"type": "address"
+					}
+				],
+				"name": "hospitalDetails",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "height",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "weight",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "aadharno",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "patientAddress",
+						"type": "string"
+					}
+				],
+				"name": "patientDetails",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_doctorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_hospitalIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "addDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_hospitalAddress",
+						"type": "address"
+					}
+				],
+				"name": "addHospital",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_patientIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_medicalReport",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_prescription",
+						"type": "string"
+					}
+				],
+				"name": "addMedicalRecord",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_height",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weight",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_aadharNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_patientaddress",
+						"type": "string"
+					}
+				],
+				"name": "addPatientDetails",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "doctors",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "doctorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "hospitalIndex",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getDoctorByIndex",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDoctorCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getHospitalByIndex",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getHospitalCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPatientCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_aadharNo",
+						"type": "uint256"
+					}
+				],
+				"name": "getPatientDetailsByAadhar",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "names",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "ages",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "heights",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "weights",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "medicalReports",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "prescriptions",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "doctorNames",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getPatientDetailsByName",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "names",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "ages",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "heights",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "weights",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "aadharNos",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "medicalReports",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "prescriptions",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "doctornames",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "hospitals",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "hospitalAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isDoctor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isPatient",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "patients",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "height",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weight",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "aadharNo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "patientAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "hospitalIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "medicalReport",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "prescription",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "doctorname",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ehr1.sol": "Hospital"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ehr1.sol": {
+			"keccak256": "0xdd47043cded83e30d58c8287a200bb6df7d176675af43be46bbafd98622cfd89",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f48a89674716800c5b2e4b5e040b1c0753f495ec17534f90c2928f964c49016d",
+				"dweb:/ipfs/QmYRUE1JB6jPXLCj6JckSK7vCY7MJwShwhPpuEFUM48Zpn"
+			]
+		}
+	},
+	"version": 1
+}
