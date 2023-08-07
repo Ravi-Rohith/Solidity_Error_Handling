@@ -1,4 +1,4 @@
-# Error Handling
+#Error Handling
 
 This Solidity program is a Error Handling program that demonstrates the basic syntax and functionality of error handling in the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to learn how to handle errors and solidity and get familiar with the Solidity language.
 
