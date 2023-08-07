@@ -1,28 +1,60 @@
-REMIX DEFAULT WORKSPACE
+# Error Handling
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+This Solidity program is a Error Handling program that demonstrates the basic syntax and functionality of error handling in the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to learn how to handle errors and solidity and get familiar with the Solidity language.
 
-This workspace contains 3 directories:
+## Description
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract demonstrates the functionality of three basic error handling statements. This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
 
-SCRIPTS
+## Getting Started
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+### Executing program
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., ErrorHandling.sol). Copy and paste the following code into the file:
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+```javascript
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+contract ErrorHandlingContract {
+    uint256 public x = 10;
+
+    function useRequire(uint256 y) public view returns (uint256) {
+        // Use require to check a condition and revert if it's not met
+        require(y != 0, "Cannot divide by zero");
+        return x / y;
+    }
+
+    function useAssert(uint256 z) public view returns (uint256) {
+        // Use assert to check an internal consistency and revert if the condition is false
+        uint256 result = x - z;
+        assert(result >= 0);
+        return result;
+    }
+
+    function useRevert(uint256 w) public pure returns (string memory) {
+        // Use revert to explicitly revert the transaction with a custom error message
+        if (w > 100) {
+            revert("Value cannot exceed 100");
+        }
+        return "Transaction successful";
+    }
+}
+
+```
+
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile ErrorHandling.sol" button.
+
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "ErrorHandling" contract from the dropdown menu, and then click on the "Deploy" button.
+
+Once the contract is deployed, you can interact with it by calling the any of the 3 functions. Click on the "ErrorHandling" contract in the left-hand sidebar, and then click on any function that you would like to call in the contract. Finally, click on the "transact" button to execute the function and retrieve the appropriate result or error message.
+
+## Authors
+
+A Ravi Rohith
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
